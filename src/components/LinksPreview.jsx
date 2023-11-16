@@ -64,8 +64,8 @@ const LinksPreview = () => {
           <img src={personalImage ? personalImage : ""} alt={personalImage ? "personal-image" : ""} className='object-fit'/>
         </div>
         <div className={`grid ${personalData?.firstName || personalData?.lastName || personalData?.emailAddress ? "gap-0" : "gap-2"} w-full place-items-center text-center`}>
-          <p className={`${personalData?.firstName || personalData?.lastName ? "w-auto p-0" : "p-2 w-1/2 bg-gray-200"} font-semibold rounded-full`}>{`${personalData?.firstName ? personalData.firstName : ""} ${personalData?.lastName ? personalData.lastName : ""}`}</p>
-          <p className={`${personalData?.emailAddress ? "w-auto p-0" : "p-1 w-1/3 bg-gray-200"} rounded-full text-xs`}>{personalData?.emailAddress ? personalData.emailAddress : ""}</p>
+          <p className={`${personalData?.firstName || personalData?.lastName ? "w-auto p-0" : "p-2 w-1/2 bg-gray-200"} font-semibold rounded-full`}>{`${personalData?.firstName ? personalData?.firstName : ""} ${personalData?.lastName ? personalData?.lastName : ""}`}</p>
+          <p className={`${personalData?.emailAddress ? "w-auto p-0" : "p-1 w-1/3 bg-gray-200"} rounded-full text-xs`}>{personalData?.emailAddress ? personalData?.emailAddress : ""}</p>
         </div>
         <div className='flex flex-col items-center gap-2 w-full mt-6 h-[150px] overflow-y-scroll'>
           {

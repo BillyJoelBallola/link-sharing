@@ -37,7 +37,7 @@ const ProfileEditor = () => {
   }
 
   useEffect(() => {
-    if(personalData.firstName !== "" || personalData.lastName !== "" || personalData.emailAddress !== "") addPersonalData(personalData);
+    if(personalData?.firstName !== "" || personalData?.lastName !== "" || personalData?.emailAddress !== "") addPersonalData(personalData);
   }, [personalData])
 
   const handleUpdaloadImage = (e) => {
@@ -67,15 +67,15 @@ const ProfileEditor = () => {
         <div className='bg-gray-100 rounded-md p-4 grid gap-4'>
           <div className='grid gap-2 md:grid-cols-[200px_1fr] items-center'>
             <span>First name*</span>
-            <input value={personalData.firstName} onChange={handleInputData} name="firstName" type="text" placeholder='John' className='border border-gray-400 rounded-md py-2 px-4' required/>
+            <input value={personalData?.firstName} onChange={handleInputData} name="firstName" type="text" placeholder='John' className='border border-gray-400 rounded-md py-2 px-4' required/>
           </div>
           <div className='grid gap-2 md:grid-cols-[200px_1fr] items-center'>
             <span>Last name*</span>
-            <input value={personalData.lastName} onChange={handleInputData} name="lastName" type="text" placeholder='Doe' className='border border-gray-400 rounded-md py-2 px-4' required/>
+            <input value={personalData?.lastName} onChange={handleInputData} name="lastName" type="text" placeholder='Doe' className='border border-gray-400 rounded-md py-2 px-4' required/>
           </div>
           <div className='grid gap-2 md:grid-cols-[200px_1fr] items-center'>
             <span>Email*</span>
-            <input value={personalData.emailAddress} onChange={handleInputData} name="emailAddress" type="email" placeholder='john.doe@example.com' className='border border-gray-400 rounded-md py-2 px-4' required/>
+            <input value={personalData?.emailAddress} onChange={handleInputData} name="emailAddress" type="email" placeholder='john.doe@example.com' className='border border-gray-400 rounded-md py-2 px-4' required/>
           </div>
         </div>
       </div>
